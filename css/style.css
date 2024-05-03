@@ -34,6 +34,12 @@ section {
   margin: 0 auto;
 }
 
+p {
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
 /* Project */
 
 header {
@@ -66,6 +72,11 @@ nav ul {
 nav a {
   color: white;
   font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: rgb(252, 248, 210);
 }
 
 .primary-cta {
@@ -89,12 +100,12 @@ Promotion
 */
 
 .promotion {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("../assets/promotion-img.jpg") center/cover no-repeat;
   border-radius: 0.5rem;
   width: 100%;
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   margin-bottom: 1rem;
 }
 
@@ -113,6 +124,100 @@ h1 {
   font-weight: 400;
 }
 
+.food-list {
+  display: grid;
+  gap: 1rem;
+}
+
 .item {
-  background: lightpink;
+  background: rgb(252, 248, 210);
+  padding: 2rem 1rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.item:hover {
+  transform: scale(1.025);
+}
+
+.menu-btn {
+  margin: 1rem 0;
+  display: block;
+  text-decoration: underline;
+  font-weight: 700;
+  transition: all 0.3s linear;
+}
+
+.menu-btn:hover {
+  text-decoration: none;
+}
+
+.opening-hrs {
+  margin: 1rem 0;
+}
+
+.item h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.item img {
+  margin-bottom: 2rem;
+}
+
+/* 
+=============
+Footer
+=============
+*/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.footer-logo-container {
+  width: 5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 28rem;
+  }
+  .promotion {
+    text-align: left;
+    padding: 1.5rem;
+  }
+
+  .promotion p {
+    max-width: 750px;
+  }
+  .food-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .opening-hrs {
+    margin: 1rem 2rem;
+  }
+
+  .item h2 {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .copyright-container {
+    border-top: 1px solid black;
+    width: 450px;
+    display: flex;
+    justify-content: end;
+  }
 }
